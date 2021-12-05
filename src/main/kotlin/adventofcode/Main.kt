@@ -1,12 +1,12 @@
 package adventofcode
 
-import adventofcode.year2021.Day04
+import adventofcode.year2021.Day05
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTimedValue
 
 @OptIn(ExperimentalTime::class)
 fun main() {
-    val day = getClass<Day04>()
+    val day = getClass<Day05>()
 
     println(measureTimedValue(day::solvePart1))
     println(measureTimedValue(day::solvePart2))
