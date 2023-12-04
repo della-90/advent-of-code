@@ -10,15 +10,18 @@ repositories {
 dependencies {
     api 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
-    testApi 'org.spockframework:spock-core:2.0-groovy-2.5'
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
 }
 
 test {
     useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+    }
 }
 
 compileKotlin {
     kotlinOptions {
-        freeCompilerArgs += '-Xopt-in=kotlin.RequiresOptIn'
+        freeCompilerArgs += '-opt-in=kotlin.RequiresOptIn'
     }
 }
